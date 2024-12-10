@@ -75,82 +75,97 @@
 				text-align: center;
 			}
 
-			
-			main section{
-				display: grid;
-				grid-template-columns: repeat(12, 1fr); 
-				row-gap: 5%;
-				column-gap: 5%;
-				margin-bottom: 3%;
-				a {
-					text-decoration: none; /* Elimina el subrayado */
-					color: inherit; /* Asegura que el color del texto no cambie */
-					display: block; /* Hace que el enlace ocupe todo el espacio del contenedor */
-				}
-				
-				a img {
-					width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
-					height: auto; /* Mantiene la proporción de la imagen */
-				}
-			}	
-			
 			main section :hover{
 				color: #401394;
 			}
 			
-			#eskaintza1{
-				grid-row: 1/2;
-				grid-column: 1/span 4;
-				border: 1px dotted black;
+
+			#catalogo {
+				margin: 20px;
+				text-align: center;
 			}
-			#eskaintza2{
-				grid-row: 1/2;
-				grid-column: 5/span 4;
-				border: 1px dotted black;
-			}
-			#eskaintza3{
-				grid-row: 1/2;
-				grid-column: 9/span 4;
-				border: 1px dotted black;
-			}
-			#eskaintza4{
-				grid-row: 2/2;
-				grid-column: 1/span 2;
-				border: 1px dotted black;
-			}
-			#eskaintza5{
-				grid-row: 2/2;
-				grid-column: 3/span 2;
-				border: 1px dotted black;
-			}
-			#eskaintza6{
-				grid-row: 2/2;
-				grid-column: 5/span 2;
-				border: 1px dotted black;
-			}
-			#eskaintza7{
-				grid-row: 2/2;
-				grid-column: 7/span 2;
-				border: 1px dotted black;
-			}
-			#eskaintza8{
-				grid-row: 2/2;
-				grid-column: 9/span 2;
-				border: 1px dotted black;
-			}
-			#eskaintza9{
-				grid-row: 2/2;
-				grid-column: 11/span 2;
-				border: 1px dotted black;
+			
+			#catalogo h2 {
+				font-size: 2em;
+				margin-bottom: 20px;
+				color: #333;
 			}
 
-						
-			#eskaintza1,#eskaintza2,#eskaintza3,#eskaintza4,#eskaintza5,#eskaintza6,#eskaintza7,#eskaintza8,#eskaintza9{
-				img{
-				width: 100%;
-				height: 80%;
-				}
+			.producto-nombre-top {
+				width: 100%;  /* Se asegura de que el nombre ocupe todo el ancho de la tarjeta */
+				text-align: left;  /* Alinea el texto a la izquierda */
+				margin-bottom: 10px; /* Separación inferior entre el nombre y la imagen */
+				padding-left: 10px; /* Espacio adicional a la izquierda para dar margen */
 			}
+			
+			.producto-nombre-top h3 {
+				font-size: 1.5em;
+				margin: 0;
+				font-weight: bold;  /* Puedes ajustar esto según lo que desees */
+			}
+			
+			/* Contenedor de cada producto */
+			.producto {
+				display: flex;
+				align-items: flex-start; /* Alinea la imagen y los textos arriba */
+				justify-content: flex-start;
+				margin-bottom: 20px;
+				border-bottom: 1px solid #ddd;
+				padding-bottom: 20px;
+				flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la pantalla es pequeña */
+			}
+			
+			/* Imagen del producto */
+			.producto img {
+				width: 150px;
+				height: auto;
+				border-radius: 8px;
+				margin-right: 20px;
+			}
+			
+			/* Información del producto */
+			.producto-info {
+				display: flex;
+				flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+				flex-grow: 1; /* Permite que el contenedor de información crezca y ocupe el espacio disponible */
+				max-width: 60%; /* Limita el ancho de la información */
+				text-align: left;
+				justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+			}
+			
+			.producto-info h3 {
+				font-size: 1.5em;
+				margin-bottom: 10px;
+			}
+			
+			.producto-info p {
+				font-size: 1em;
+				margin-bottom: 10px;
+				color: #555;
+			}
+			
+			.precio {
+				font-size: 1.2em;
+				font-weight: bold;
+				color: #e74c3c;
+				display: block;
+				margin-bottom: 10px;
+			}
+			
+			.comprar {
+				background-color: #27ae60;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				margin-top: 10px;
+			}
+			
+			.comprar:hover {
+				background-color: #2ecc71;
+			}
+			
 
 			footer {
                 border: 1px dashed black;
