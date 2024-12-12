@@ -1,0 +1,250 @@
+			*{padding: 0; margin: 0;}
+			body{
+                border: 1px dashed red;
+				box-sizing: border-box;
+				margin: auto;
+				max-width: 767px;
+				background-image: linear-gradient(to bottom, white 0%, #4c8bd3 100%); background-repeat: no-repeat;
+            } 
+            header {
+                border: 1px dashed black;
+                margin: 1.3477088948787061994609164420485%;
+                padding: 1.3477088948787061994609164420485%;
+				width: 94.339622641509433962264150943396%;
+				img{
+					width: 16.96%;
+					height: 16.96%;
+					border-radius:1.95%;
+				}
+				h1{
+					display: inline;
+					position: relative;
+					left: 2.61%;
+					top: 10%;
+				}
+            }
+			#menu-hamburguesa {
+				display: none;
+				background-color: #6bbae7;
+				width: 75px;
+			}
+			
+			#toggle-menu:checked + #boton-hamburguesa + #menu-hamburguesa {
+				display: block;
+			}
+			
+			
+			#boton-hamburguesa {
+				color: #fff;
+				font-size: 24px;
+				font-family: Arial, Helvetica, sans-serif;
+				cursor: pointer;
+				display: inline-block;
+			}
+			
+			#boton-hamburguesa img {
+				width: 3.8%;
+				height: 3.8%;
+				border-radius: 50%;
+			}
+			
+			
+			
+            nav {
+                border: 1px dashed black;
+				margin-left: 1.3477088948787061994609164420485%;
+				margin-right: 1.3477088948787061994609164420485%;
+                padding: 1.3477088948787061994609164420485%;
+				width: 94.339622641509433962264150943396%;
+				
+            }
+			
+			
+			nav li {
+				display: inline-block;
+				margin: 0.65%;
+			}
+			
+			
+
+            main {
+                border: 1px dashed black;
+                margin: 1.3477088948787061994609164420485%;
+				padding: 1.3477088948787061994609164420485%;
+				text-align: center;
+			}
+			
+
+
+			.imagen-principal img {
+				width: 70%;
+				height: fit-content;
+				border-radius: 8px;
+				transition: all 0.3s ease;
+			}
+			
+			.imagenes-secundarias {
+				display: flex;
+				justify-content: space-between;  
+				margin-top: 10px;
+				width: 70%;  
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 2%;
+				gap: 5%;  
+			}
+			
+			
+			.imagen-secundaria {
+				width: 30%; 
+				height: auto;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: transform 0.3s ease;
+			}
+
+			.imagen-secundaria:hover {
+				transform: scale(1.1);
+			}
+			.comprar {
+				background-color: #27ae60;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				margin-top: 10px;
+			}
+			
+			.comprar:hover {
+				background-color: #2ecc71;
+			}
+
+			footer {
+                border: 1px dashed black;
+				margin-left: 1.3477088948787061994609164420485%;
+				margin-right: 1.3477088948787061994609164420485%;
+				margin-bottom: 1.3477088948787061994609164420485%;
+                padding: 1.3477088948787061994609164420485%;
+				width: 94.339622641509433962264150943396%;	
+            }	
+			@media only screen and (max-width: 767px){
+				
+				header {
+					margin-bottom: 0;
+				}
+				header img, h1 {
+					scale: 70%;
+				}
+				header h1 {
+					scale: 70%;
+				}
+				span{
+					position: fixed;
+						top: 10px;
+						left: 2%;
+				}
+				#menu-hamburguesa ul {
+       				 display: block; 
+    			}
+
+   				 #menu-hamburguesa ul li {
+   				     margin: 2%;
+    			}
+
+  				#boton-hamburguesa {
+      				display: inline-block; 
+  				  }
+
+   				 #menu-hamburguesa {
+					display: none; 
+					margin: 1.5477088948787061994609164420485%;
+					padding: 0; 
+					position: fixed;
+						top: 30px;
+						left: 0%;
+					width: 80px;
+					z-index: 9999;
+				}
+				#menu-hamburguesa :hover{
+					color: #401394;
+				}
+			    main section {
+					display: grid;
+					grid-template-columns: 1fr;
+					row-gap: 15px; 
+					margin-top: 10px;
+				}
+			
+				.imagen-principal img {
+					width: 100%;
+					height: auto;
+					border-radius: 8px;
+				}
+			
+				
+				.imagenes-secundarias {
+					display: flex;
+					justify-content: space-between;
+					margin-top: 10px;
+					width: 100%;
+					gap: 5%;
+				}
+			
+				.imagen-secundaria {
+					width: 30%;
+					height: auto;
+					border-radius: 8px;
+					cursor: pointer;
+					transition: transform 0.3s ease;
+				}
+			
+				.imagen-secundaria:hover {
+					transform: scale(1.1); 
+				}
+			
+				.comprar {
+					background-color: #27ae60;
+					color: white;
+					padding: 10px 20px;
+					border: none;
+					border-radius: 5px;
+					cursor: pointer;
+					margin-top: 10px;
+				}
+			
+				.comprar:hover {
+					background-color: #2ecc71;
+				}
+				
+				
+
+			
+				
+
+}
+			
+			@media only screen and (min-width: 768px) {
+				#boton-hamburguesa, 
+				#toggle-menu { 
+					display: none; 
+				}
+			
+				#menu-hamburguesa {
+					display: block; 
+					background-color: transparent; 
+					width: auto; 
+				}
+			
+				#menu-hamburguesa ul {
+					display: flex; 
+					justify-content: space-around;
+				}
+			
+				#menu-hamburguesa ul li a {
+					font-size: 14px;
+					font-family: sans-serif;
+					color: #111010;
+				}
+			}
+			

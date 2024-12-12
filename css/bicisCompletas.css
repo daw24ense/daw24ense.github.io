@@ -75,8 +75,18 @@
 				text-align: center;
 			}
 
-			main section :hover{
+
+			main section :hover h3{
 				color: #401394;
+			}
+			a {
+				text-decoration: none; /* Elimina el subrayado */
+				color: inherit; /* Hereda el color del texto de su contenedor */
+			}
+			
+			/* Estilo para los enlaces dentro del main */
+			main a {
+				color: inherit; /* Hereda el color del contenedor principal */
 			}
 			
 
@@ -87,15 +97,15 @@
 			
 			#catalogo h2 {
 				font-size: 2em;
-				margin-bottom: 20px;
+				margin-bottom: 3%;
 				color: #333;
 			}
 
 			.producto-nombre-top {
 				width: 100%;  /* Se asegura de que el nombre ocupe todo el ancho de la tarjeta */
 				text-align: left;  /* Alinea el texto a la izquierda */
-				margin-bottom: 10px; /* Separación inferior entre el nombre y la imagen */
-				padding-left: 10px; /* Espacio adicional a la izquierda para dar margen */
+				margin-bottom: 1.5477088948787061994609164420485%; /* Separación inferior entre el nombre y la imagen */
+				padding-left: 1.5477088948787061994609164420485%; /* Espacio adicional a la izquierda para dar margen */
 			}
 			
 			.producto-nombre-top h3 {
@@ -165,7 +175,6 @@
 			.comprar:hover {
 				background-color: #2ecc71;
 			}
-			
 
 			footer {
                 border: 1px dashed black;
@@ -216,74 +225,34 @@
 	#menu-hamburguesa :hover{
 		color: #401394;
 	}
-				main section{
-					margin-top: 0%;
-					display: grid;
-					grid-template-columns: repeat(6, 1fr); 
-					row-gap: 0%;
-					column-gap: 0%;
-					margin: ;
-				}
-				
-				#eskaintza1,#eskaintza2,#eskaintza3,#eskaintza4,#eskaintza5,#eskaintza6,#eskaintza7,#eskaintza8,#eskaintza9{
-					img{
-					scale: 60%;
-					}
-					p{
-					scale: 60%;
-					}
-				}
-				
-				main section div{
-					margin: 1.3477088948787061994609164420485%;
-				}
+	main section {
+        margin: 0; 
+        padding: 0; 
+        display: grid;
+        grid-template-columns: 1fr; 
+        row-gap: 20px; 
+        column-gap: 0;
+    }
+	
+    .producto {
+        max-width: 100%;
+        padding: 1.5477088948787061994609164420485%;
+        display: flex;
+        flex-direction: column; /* Organiza los productos en columna */
+        align-items: center; /* Centra los productos */
+        margin: 0; 
+    }
 
-				#eskaintza1{
-					grid-row: 1/2;
-					grid-column: 1/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza2{
-					grid-row: 1/2;
-					grid-column: 4/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza3{
-					grid-row: 2/3;
-					grid-column: 1/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza4{
-					grid-row: 2/3;
-					grid-column: 4/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza5{
-					grid-row: 4/5;
-					grid-column: 1/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza6{
-					grid-row: 4/5;
-					grid-column: 4/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza7{
-					grid-row: 5/6;
-					grid-column: 1/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza8{
-					grid-row: 5/6;
-					grid-column: 4/span 3;
-					border: 1px dotted black;
-				}
-				#eskaintza9{
-					grid-row: 6/7;
-					grid-column: 2/span 4;
-					border: 1px dotted black;					
-					margin-bottom: 0;
-				}
+    .producto img {
+        width: 80%;
+        max-width: 60%; 
+        height: auto; 
+    }
+
+    .producto-info {
+        text-align: center; 
+    }
+			
 				
 
 }

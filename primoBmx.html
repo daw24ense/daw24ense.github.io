@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rider Shop</title>
+        <link rel="stylesheet" href="css/bmx.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/rideshop.jpg" alt="logoa">
+            <h1>Rider shop</h1>
+        </header>
+        <input type="checkbox" id="toggle-menu" style="display: none;">
+        <label for="toggle-menu" id="boton-hamburguesa">
+            <span>
+                <img src="img/BURGER.JPG" alt="">
+            </span>
+        </label>
+        <nav id="menu-hamburguesa">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="topRosa">
+                <h2>Top Rosa</h2>
+                <div class="producto">
+                    <div class="imagen-principal">
+                        <img id="imagen-principal" src="img/primo1.jpg" alt="Top Rosa ultimate">
+                    </div>
+                    <div class="imagenes-secundarias">
+                        <img class="imagen-secundaria" src="img/primo2.jpg" alt="Imagen 1">
+                        <img class="imagen-secundaria" src="img/primo3.jpg" alt="Imagen 2">
+                        <img class="imagen-secundaria" src="img/primo4.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="producto-info">
+                        <p>bmx de alta calidad y poco peso para rampa</p>
+                        <h5>300.99€.</h5>
+                        <button class="comprar">Añadir al carrito</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2020 Lea Artibai Ikastetzea</p>
+        </footer>
+        <script>
+            // Intercambiar la imagen principal por la imagen clicada
+            const imagenesSecundarias = document.querySelectorAll('.imagen-secundaria');
+            const imagenPrincipal = document.getElementById('imagen-principal');
+    
+            imagenesSecundarias.forEach(imagen => {
+                imagen.addEventListener('click', function() {
+                    const tempSrc = imagenPrincipal.src;
+                    imagenPrincipal.src = imagen.src;
+                    imagen.src = tempSrc;
+                });
+            });
+        </script>
+    </body>
+</html>

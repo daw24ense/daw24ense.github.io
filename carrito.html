@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rider Shop</title>
+        <link rel="stylesheet" href="css/carrito.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/rideshop.jpg" alt="logoa">
+            <h1>Rider shop</h1>
+        </header>
+        <input type="checkbox" id="toggle-menu" style="display: none;">
+        <label for="toggle-menu" id="boton-hamburguesa">
+            <span>
+                <img src="img/BURGER.JPG" alt="">
+            </span>
+        </label>
+        <nav id="menu-hamburguesa">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Carrito</h2>
+            <section class="carrito">
+                <!-- Producto 1 -->
+                <div class="producto">
+                    <a href="haro.html">
+                        <img src="img/haro1.jpg" alt="Producto 1">
+                    </a>
+                    <div class="producto-info">
+                        <span class="nombre">Haro Race Lite</span>
+                        <span class="precio" data-precio="10">250.00€</span>
+                        
+                        <label for="cantidad1">Cantidad:</label>
+                        <input type="number" id="cantidad1" class="cantidad" value="1" min="1" data-precio-unitario="250.00" onchange="calcularTotal()">
+                        
+                        <span class="total" id="total1">Total: 250.00€</span>
+                    </div>
+                </div>
+            
+                <!-- Producto 2 -->
+                <div class="producto">
+                    <a href="topRosa.html">
+                        <img src="img/subrosa1.jpg" alt="Producto 2">
+                    </a>
+                    <div class="producto-info">
+                        <span class="nombre">Top Rosa</span>
+                        <span class="precio" data-precio="15">650.99€</span>
+                        
+                        <label for="cantidad2">Cantidad:</label>
+                        <input type="number" id="cantidad2" class="cantidad" value="1" min="1" data-precio-unitario="650.99" onchange="calcularTotal()">
+                        
+                        <span class="total" id="total2">Total: 650.99€</span>
+                    </div>
+                </div>
+                
+                <!-- Total General -->
+                <div class="total-general">
+                    <span><strong>Total Carrito: </strong><span id="total-carrito">900.99</span></span>
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2020 Lea Artibai Ikastetzea</p>
+        </footer>
+    </body>
+</html>
