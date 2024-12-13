@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rider Shop</title>
-        <link rel="stylesheet" href="css/carrito.css">
+        <link rel="stylesheet" href="css/pedido2.css">
     </head>
     <body>
         <header>
@@ -28,43 +28,52 @@
             </ul>
         </nav>
         <main>
-            <h2>Carrito</h2>
+            <h2>Pedido</h2>
             <section class="carrito">
                 <!-- Producto 1 -->
                 <div class="producto">
-                    <a href="haro.html">
-                        <img src="img/haro1.jpg" alt="Producto 1">
-                    </a>
+                    
+                    
                     <div class="producto-info">
-                        <h3>Haro Race Lite</h3>
+                        <a>Haro Race Lite =</a>
                         <span class="precio" data-precio="10">250.00€</span>
                         <label for="cantidad1">Cantidad:</label>
-                        <input type="number" id="cantidad1" class="cantidad" value="1" min="1" data-precio-unitario="250.00" onchange="calcularTotal()">
+                        <input type="number" id="cantidad1" class="cantidad" value="1" min="1" data-precio-unitario="250.00" disabled>
                         <span class="total" id="total1">Total: 250.00€</span>
                     </div>
                 </div>
-            
+                            
                 <!-- Producto 2 -->
                 <div class="producto">
-                    <a href="topRosa.html">
-                        <img src="img/subrosa1.jpg" alt="Producto 2">
-                    </a>
+                    
                     <div class="producto-info">
-                        <h3>Top Rosa</h3>
+                        <a>Top Rosa =</a>
                         <span class="precio" data-precio="15">650.99€</span>
                         <label for="cantidad2">Cantidad:</label>
-                        <input type="number" id="cantidad2" class="cantidad" value="1" min="1" data-precio-unitario="650.99" onchange="calcularTotal()">
-                        
+                        <input type="number" id="cantidad2" class="cantidad" value="1" min="1" data-precio-unitario="650.99" disabled>
                         <span class="total" id="total2">Total: 650.99€</span>
                     </div>
                 </div>
                 
                 <!-- Total General -->
                 <div class="total-general">
-                    <span id="total-carrito"><h3>Total Carrito: </h3><span id="total-carrito">900.99€</span></span>
+                    <span id="total-carrito"><h4>Total del pedido: </h4><span id="total-carrito">900.99€</span></span>
                 </div>
-                <a href="pedido1.html" id="boton-pedido" class="btn">Continuar con el pedido</a>
+                <a href="carrito.html" id="boton-pedido" class="btn">Editar carrito</a>
             </section>
+            <!-- Datos del Cliente -->
+            <h4>Datos de Envío</h4>
+            <div class="form-container">
+                <p><strong>Nombre:</strong> Juan Pérez</p>
+                <p><strong>Apellido:</strong> González</p>
+                <p><strong>Dirección:</strong> Calle Ficticia, 123</p>
+                <p><strong>Población:</strong> Madrid</p>
+                <p><strong>Código Postal:</strong> 28001</p>
+                <p><strong>Provincia:</strong> Madrid</p>
+                <p><strong>Correo Electrónico:</strong> juan.perez@email.com</p>
+            </div>
+            <a href="pedido1.html" id="boton-pedido" class="btn">Editar datos</a>
+            <a href="pedido3.html" id="boton-pedido" class="btn">Confirmar Pedido</a>
         </main>
     
         <footer>

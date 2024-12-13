@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rider Shop</title>
+        <link rel="stylesheet" href="css/pedido1.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/rideshop.jpg" alt="logoa">
+            <h1>Rider shop</h1>
+        </header>
+        <input type="checkbox" id="toggle-menu" style="display: none;">
+        <label for="toggle-menu" id="boton-hamburguesa">
+            <span>
+                <img src="img/BURGER.JPG" alt="">
+            </span>
+        </label>
+        <nav id="menu-hamburguesa">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Pedido</h2>
+            <section>
+              <h3>Tus datos</h3>
+              <div class="form-container">
+                <form action="pedido2.html" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required><br>
+
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required><br>
+
+                    <label for="poblacion">Población:</label>
+                    <input type="text" id="poblacion" name="poblacion" required><br>
+
+                    <label for="codigo_postal">Código postal:</label>
+                    <input type="text" id="codigo_postal" name="codigo_postal" required><br>
+
+                    <label for="provincia">Provincia:</label>
+                    <input type="text" id="provincia" name="provincia" required><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required><br>
+              <a href="pedido2.html" id="boton-pedido" class="btn">Sigiente</a>
+            </form>
+            </div>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2020 Lea Artibai Ikastetzea</p>
+        </footer>
+    </body>
+</html>
