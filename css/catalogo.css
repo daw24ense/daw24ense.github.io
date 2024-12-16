@@ -7,9 +7,8 @@
     			width: 100%; /* Asegura que el body ocupe el 100% del ancho disponible */
    				background-image: linear-gradient(to bottom, white 0%, #4c8bd3 100%); /* Fondo de la página */
     			background-repeat: no-repeat;
-    			background-attachment: fixed; /* El fondo no se mueve al hacer scroll */
-    			background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
-    			min-height: 100vh; 
+    			background-attachment: fixed; 
+    			background-size: cover; 
 			} 
 
 			

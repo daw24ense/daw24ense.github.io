@@ -4,7 +4,9 @@
 				margin: auto;
 				max-width: 767px;
 				background-image: linear-gradient(to bottom, white 0%, #4c8bd3 100%); background-repeat: no-repeat;
-            } 
+				background-attachment: fixed; 
+    			background-size: cover; 
+			} 
             header {
                 border: 1px dashed black;
                 margin: 1.3477088948787061994609164420485%;
