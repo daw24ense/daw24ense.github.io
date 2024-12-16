@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rider Shop</title>
+        <link rel="stylesheet" href="css/contacto.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/rideshop.jpg" alt="logoa">
+            <h1>Rider shop</h1>
+        </header>
+        <input type="checkbox" id="toggle-menu" style="display: none;">
+        <label for="toggle-menu" id="boton-hamburguesa">
+            <span>
+                <img src="img/BURGER.JPG" alt="">
+            </span>
+        </label>
+        <nav id="menu-hamburguesa">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Contacto</h2>
+            <p>¡Estamos aquí para ayudarte! Si tienes alguna duda, sugerencia o necesitas asistencia, no dudes en ponerte en contacto con nosotros.</p>
+        
+            <h3>Detalles de contacto</h3>
+            <p><strong>Teléfono:</strong> +34 123 456 789</p>
+            <p><strong>Correo electrónico:</strong> <a href="mailto:contacto@ridershop.com">contacto@ridershop.com</a></p>
+            <p><strong>Dirección:</strong> Calle Brabra, 123, 08000, Barcelona, España</p>
+        
+            <h3>Formulario de contacto</h3>
+            <p>Si prefieres, puedes completar el siguiente formulario y nos pondremos en contacto contigo lo antes posible:</p>
+            
+            <form action="contacto_envio.html" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+        
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required><br>
+        
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br>
+        
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </form>
+        
+            <p>Te responderemos a la mayor brevedad posible. ¡Gracias por tu interés en Rider Shop!</p>
+        </main>
+    
+        <footer>
+            <p>&copy; 2020 Lea Artibai Ikastetzea</p>
+        </footer>
+    </body>
+</html>

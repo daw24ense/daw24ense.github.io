@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rider Shop</title>
+        <link rel="stylesheet" href="css/visa.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/rideshop.jpg" alt="logoa">
+            <h1>Rider shop</h1>
+        </header>
+        <input type="checkbox" id="toggle-menu" style="display: none;">
+        <label for="toggle-menu" id="boton-hamburguesa">
+            <span>
+                <img src="img/BURGER.JPG" alt="">
+            </span>
+        </label>
+        <nav id="menu-hamburguesa">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Pedido</h2>
+            <section>
+                <h3>Datos de la tarjeta</h3>
+                <div class="form-container">
+                    <form action="pedido5.html" method="POST">
+                        <label for="nombre">Nombre del titular:</label>
+                        <input type="text" id="nombre" name="nombre" required><br>
+            
+                        <label for="tarjeta">Número de tarjeta:</label>
+                        <input type="text" id="tarjeta" name="tarjeta" required maxlength="16" pattern="\d{16}" placeholder="XXXX XXXX XXXX XXXX"><br>
+            
+                        <label for="fecha_vencimiento">Fecha de vencimiento:</label>
+                        <input type="month" id="fecha_vencimiento" name="fecha_vencimiento" required><br>
+            
+                        <label for="codigo_seguridad">Código de seguridad (CVV):</label>
+                        <input type="text" id="codigo_seguridad" name="codigo_seguridad" required maxlength="3" pattern="\d{3}" placeholder="XXX"><br>
+            
+                        <label for="direccion">Dirección de facturación:</label>
+                        <input type="text" id="direccion" name="direccion" required><br>
+
+                        <a href="pedido5.html" id="boton-continuar" class="btn">Pagar</a>
+                    </form>
+                </div>
+                
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2020 Lea Artibai Ikastetzea</p>
+        </footer>
+    </body>
+</html>

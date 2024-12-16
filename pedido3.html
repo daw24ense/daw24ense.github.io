@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rider Shop</title>
+        <link rel="stylesheet" href="css/pedido3.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/rideshop.jpg" alt="logoa">
+            <h1>Rider shop</h1>
+        </header>
+        <input type="checkbox" id="toggle-menu" style="display: none;">
+        <label for="toggle-menu" id="boton-hamburguesa">
+            <span>
+                <img src="img/BURGER.JPG" alt="Menú">
+            </span>
+        </label>
+        <nav id="menu-hamburguesa">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Elige tu método de pago:</h2>
+            <form id="formulario_pago" method="GET" onsubmit="return seleccionarMetodoPago()">
+                <section class="metodos-pago">
+                    <label for="visa">
+                        <input type="radio" name="metodo_pago" value="visa" id="visa" required>
+                        <img src="img/visa.jpg" alt="Visa" style="width: 50px; height: auto;">
+                        Visa
+                    </label>
+                    <label for="paypal">
+                        <input type="radio" name="metodo_pago" value="paypal" id="paypal">
+                        <img src="img/paypal.jpg" alt="PayPal" style="width: 50px; height: auto;">
+                        PayPal
+                    </label>
+                    <label for="bizum">
+                        <input type="radio" name="metodo_pago" value="bizum" id="bizum">
+                        <img src="img/bizum.jpg" alt="Bizum" style="width: 50px; height: auto;">
+                        Bizum
+                    </label>
+                </section>
+                
+                <!-- El botón de enviar -->
+                <button type="submit" id="boton-continuar">Continuar</button>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2020 Lea Artibai Ikastetzea</p>
+        </footer>
+        <script>
+            function seleccionarMetodoPago() {
+                // Obtenemos el valor del radio button seleccionado
+                var metodoSeleccionado = document.querySelector('input[name="metodo_pago"]:checked');
+
+                // Verificamos si se ha seleccionado un método de pago
+                if (metodoSeleccionado) {
+                    var metodo = metodoSeleccionado.value;
+
+                    // Cambiar el action del formulario dependiendo de la selección
+                    if (metodo === "visa") {
+                        document.getElementById("formulario_pago").action = "visa.html";
+                    } else if (metodo === "paypal") {
+                        document.getElementById("formulario_pago").action = "paypal.html";
+                    } else if (metodo === "bizum") {
+                        document.getElementById("formulario_pago").action = "bizum.html";
+                    }
+
+                    // Enviar el formulario
+                    return true;
+                } else {
+                    alert("Por favor, selecciona un método de pago.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

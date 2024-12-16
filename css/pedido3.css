@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    max-width: 767px; /* Limita el ancho máximo del contenido */
+    width: 100%; /* Asegura que el body ocupe el 100% del ancho disponible */
+    background-image: linear-gradient(to bottom, white 0%, #4c8bd3 100%); /* Fondo de la página */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* El fondo no se mueve al hacer scroll */
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+    min-height: 100vh;
+}
+
+header {
+    border: 1px dashed black;
+    margin: 1.3477088948787061994609164420485%;
+    padding: 1.3477088948787061994609164420485%;
+    width: 94.339622641509433962264150943396%;
+}
+
+header img {
+    width: 16.96%;
+    height: 16.96%;
+    border-radius: 1.95%;
+}
+
+header h1 {
+    display: inline;
+    position: relative;
+    left: 2.61%;
+    top: 10%;
+}
+
+#menu-hamburguesa {
+    display: none; /* Ocultar el menú hamburguesa por defecto */
+    background-color: #6bbae7;
+    width: 75px;
+}
+
+/* Mostrar el menú hamburguesa solo cuando el checkbox está seleccionado */
+#toggle-menu:checked + #boton-hamburguesa + #menu-hamburguesa {
+    display: block;
+}
+
+/* Estilo del botón de menú hamburguesa */
+#boton-hamburguesa {
+    color: #fff;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#boton-hamburguesa img {
+    width: 3.8%;
+    height: 3.8%;
+    border-radius: 50%;
+}
+
+
+
+nav {
+    border: 1px dashed black;
+    margin-left: 1.3477088948787061994609164420485%;
+    margin-right: 1.3477088948787061994609164420485%;
+    padding: 1.3477088948787061994609164420485%;
+    width: 94.339622641509433962264150943396%;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0.65%;
+}
+
+main {
+    border: 1px dashed black;
+    margin: 1.3477088948787061994609164420485%;
+    padding: 1.3477088948787061994609164420485%;
+    text-align: center;
+	
+}
+
+
+.metodos-pago label {
+	display: flex;
+	align-items: center;
+	margin-bottom: 3%;
+    font-size: 18px;
+	cursor: pointer;
+}
+section img{
+    margin: 2%;
+}
+
+
+#boton-continuar {
+	display: block;
+	margin-top: 20px;
+	width: 20%;
+	padding: 10px;
+	background-color: #36a14d;
+	color: #fff;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#boton-continuar:hover {
+	background-color: #3a6fa0;
+}
+
+footer {
+    border: 1px dashed black;
+    margin-left: 1.3477088948787061994609164420485%;
+    margin-right: 1.3477088948787061994609164420485%;
+    margin-bottom: 1.3477088948787061994609164420485%;
+    padding: 1.3477088948787061994609164420485%;
+    width: 94.339622641509433962264150943396%;
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        margin-bottom: 0;
+    }
+
+    header img, h1 {
+        scale: 70%;
+    }
+
+    span {
+        position: fixed;
+        top: 10px;
+        left: 2%;
+    }
+
+    #menu-hamburguesa ul {
+        display: block; /* En pantallas pequeñas, el menú es vertical */
+    }
+
+    #menu-hamburguesa ul li {
+        margin: 2%;
+    }
+
+    #boton-hamburguesa {
+        display: inline-block; /* Mostrar el botón hamburguesa */
+    }
+
+    #menu-hamburguesa {
+        display: none; /* Ocultar por defecto */
+        margin: 1.5477088948787061994609164420485%;
+        padding: 0; /* Elimina paddings */
+        position: fixed;
+        top: 30px;
+        left: 0%;
+        width: 80px;
+        z-index: 9999;
+    }
+
+    #menu-hamburguesa :hover {
+        color: #401394;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #boton-hamburguesa, 
+    #toggle-menu { 
+        display: none; 
+    }
+
+    #menu-hamburguesa {
+        display: block; 
+        background-color: transparent; 
+        width: auto; 
+    }
+
+    #menu-hamburguesa ul {
+        display: flex; 
+        justify-content: space-around;
+    }
+
+    #menu-hamburguesa ul li a {
+        font-size: 14px; /* Ajusta los estilos para pantallas grandes */
+        font-family: sans-serif;
+        color: #111010;
+    }
+}

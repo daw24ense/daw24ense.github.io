@@ -92,71 +92,7 @@
 				padding-bottom: 2%;
 			}
 			
-			.carrito {
-				position: relative; 
-			}
-			
-			.producto {
-				display: flex;
-				align-items: center;
-				padding: 15px;
-				border-bottom: 1px solid #ddd;
-				margin-bottom: 10px;
-				background-color: #fff;
-				background-color: transparent;
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-				position: relative; /* Asegura la correcta interacción */
-				z-index: 15;
-				
-			}
-			
-			.producto a {
-				text-decoration: none; /* Elimina subrayado en el enlace */
-				color: inherit; /* Mantiene el color del texto */
-				display: flex; /* Hace que los elementos dentro del enlace se alineen */
-				align-items: center;
-				
-			}
-			
-			.producto img {
-				width: 100px;
-				height: 100px;
-				object-fit: cover;
-				margin-right: 15px; /* Espacio entre imagen y texto */
-			}
-			
-			.producto-info {
-				display: flex;
-				flex-direction: column;
-			}
-			
-			.producto-info .nombre {
-				font-weight: bold;
-				font-size: 18px;
-				
-			}
-			
-			.producto-info .precio {
-				color: #777;
-				font-size: 16px;
-			}
-			
-			#total-carrito {
-				display: flex; /* Usamos flexbox para alinear los elementos */
-				align-items: center; /* Alineamos verticalmente en el centro */
-				justify-content: flex-start; /* Alineamos los elementos al principio del contenedor */
-				margin-top: 10px; /* Separación superior */
-			}
-			
-			#total-carrito h3 {
-				margin-right: 3px; /* Añadir algo de espacio entre el título y el precio */
-			}
-			
-			#total-carrito span {
-				font-weight: bold; /* Asegura que el precio sea visible */
-				margin-bottom: 0;
-			}
-			#boton-pedido {
+			#boton-continuar {
 				display: block;
 				text-align: center; 
 				background-color: #36a14d;
@@ -166,12 +102,43 @@
 				text-decoration: none;
 				border-radius: 3%; 
 				transition: background-color 0.3s ease;
-				margin-bottom: 3%;
-
+			}
+			.form-container {
+				margin-top: 20px;
+				text-align: left;
+				padding: 15px;
+				border-radius: 5px;
+				max-width: 100%; /* Asegura que el formulario no se desborde */
+				box-sizing: border-box; /* Evita que el padding cause desbordes */
+				margin: 0 auto; /* Centra el formulario */
 			}
 			
-			#boton-pedido:hover {
-				background-color: #3a6fa0; /* Color de fondo cuando se pasa el ratón */
+			.form-container input {
+				width: 100%; /* Asegura que los inputs ocupen todo el ancho disponible */
+				padding: 8px;
+				margin: 5px 0 15px;
+				border: 1px solid #ddd;
+				border-radius: 3px;
+				box-sizing: border-box; /* Evita que el padding haga que los inputs se desborden */
+			}
+			
+
+			#boton-continuar {
+				display: block;
+				margin-top: 20px;
+				width: 95%;
+				padding: 10px;
+				background-color: #36a14d;
+				color: #fff;
+				font-size: 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			
+			#boton-continuar:hover {
+				background-color: #3a6fa0;
 			}
 			footer {
                 border: 1px dashed black;
@@ -223,21 +190,7 @@
 		color: #401394;
 	}
 			
-				
-		.precio{
-			position: relative;
-			margin-bottom: 5%;
 
-		}
-		.total{
-			position: relative;
-
-		}
-		#total-carrito{
-			position: relative;
-			top: 0%;
-		}
-		
 }
 			
 			@media only screen and (min-width: 768px) {
