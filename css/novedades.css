@@ -50,13 +50,7 @@
 				border-radius: 50%;
 			}
 			
-			.mapa img {
-					width: 150px;
-					height: auto;
-					border-radius: 8px;
-					margin-right: 20px;
-			}
-
+			
 			
             nav {
                 border: 1px dashed black;
@@ -76,50 +70,56 @@
 			
 
             main {
-				display :flex;
                 border: 1px dashed black;
                 margin: 1.3477088948787061994609164420485%;
 				padding: 1.3477088948787061994609164420485%;
 				text-align: center;
-				width: 94.3%;
-				padding-left: 5%;
-				padding-right: 5%;
-				
 			}
-			.btn{
-				width: 60%;
-				display: block;
+
+
+			main section :hover h3{
+				color: #401394;
 			}
-			.btn2{
-				width: 60%;
-				display: block;
-			
-			}
-			.producto{
-				max-width: 60%;
-				align-items: center;
-				margin-left: 20%;
-			}
-			main h2{
-				align-self: center;
-			}
-			main h3{
-				align-items: center;
-			}
-			
 			a {
 				text-decoration: none; /* Elimina el subrayado */
 				color: inherit; /* Hereda el color del texto de su contenedor */
 			}
 			
+			/* Estilo para los enlaces dentro del main */
+			main a {
+				color: inherit; /* Hereda el color del contenedor principal */
+			}
 			
 
+			#catalogo {
+				margin: 20px;
+				text-align: center;
+			}
 			
+			#catalogo h2 {
+				font-size: 2em;
+				margin-bottom: 3%;
+				color: #333;
+			}
+
+			.producto-nombre-top {
+				width: 100%;  /* Se asegura de que el nombre ocupe todo el ancho de la tarjeta */
+				text-align: left;  /* Alinea el texto a la izquierda */
+				margin-bottom: 1.5477088948787061994609164420485%; /* Separación inferior entre el nombre y la imagen */
+				padding-left: 1.5477088948787061994609164420485%; /* Espacio adicional a la izquierda para dar margen */
+			}
+			
+			.producto-nombre-top h3 {
+				font-size: 1.5em;
+				margin: 0;
+				font-weight: bold;  /* Puedes ajustar esto según lo que desees */
+			}
 			
 			/* Contenedor de cada producto */
 			.producto {
 				display: flex;
-				align-items: center; 
+				align-items: flex-start; /* Alinea la imagen y los textos arriba */
+				justify-content: flex-start;
 				margin-bottom: 20px;
 				border-bottom: 1px solid #ddd;
 				padding-bottom: 20px;
@@ -128,10 +128,33 @@
 			
 			/* Imagen del producto */
 			.producto img {
-				width: 100%;
+				width: 150px;
 				height: auto;
 				border-radius: 8px;
+				margin-right: 20px;
 			}
+			
+			/* Información del producto */
+			.producto-info {
+				display: flex;
+				flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+				flex-grow: 1; /* Permite que el contenedor de información crezca y ocupe el espacio disponible */
+				max-width: 60%; /* Limita el ancho de la información */
+				text-align: left;
+				justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+			}
+			
+			.producto-info h3 {
+				font-size: 1.5em;
+				margin-bottom: 10px;
+			}
+			
+			.producto-info p {
+				font-size: 1em;
+				margin-bottom: 10px;
+				color: #555;
+			}
+			
 			.precio {
 				font-size: 1.2em;
 				font-weight: bold;
@@ -140,7 +163,7 @@
 				margin-bottom: 10px;
 			}
 			
-			.comprar, .btn, .btn2{
+			.comprar {
 				background-color: #27ae60;
 				color: white;
 				padding: 10px 20px;
@@ -150,10 +173,7 @@
 				margin-top: 10px;
 			}
 			
-			.comprar :hover {
-				background-color: #2ecc71;
-			}
-			.btn :hover {
+			.comprar:hover {
 				background-color: #2ecc71;
 			}
 
