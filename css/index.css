@@ -25,17 +25,15 @@
 				}
             }
 			#menu-hamburguesa {
-				display: none; /* Ocultar el menú hamburguesa por defecto */
+				display: none;
 				background-color: #6bbae7;
 				width: 75px;
 			}
 			
-			/* Mostrar el menú hamburguesa solo cuando el checkbox está seleccionado */
 			#toggle-menu:checked + #boton-hamburguesa + #menu-hamburguesa {
 				display: block;
 			}
 			
-			/* Estilo del botón de menú hamburguesa */
 			#boton-hamburguesa {
 				color: #fff;
 				font-size: 24px;
@@ -50,12 +48,7 @@
 				border-radius: 50%;
 			}
 			
-			.mapa img {
-					width: 150px;
-					height: auto;
-					border-radius: 8px;
-					margin-right: 20px;
-			}
+			
 
 			
             nav {
@@ -73,64 +66,59 @@
 				margin: 0.65%;
 			}
 			
-			
 
-            main {
-				display :flex;
-                border: 1px dashed black;
-                margin: 1.3477088948787061994609164420485%;
-				padding: 1.3477088948787061994609164420485%;
+			main {
+				display: flex;
+				justify-content: center;
+				border: 1px dashed black;
 				text-align: center;
-				width: 94.3%;
-				padding-left: 5%;
-				padding-right: 5%;
-				
+				margin: 1.3477088948787061994609164420485%;
+				padding-inline: 1%;
+				padding-top: 3%;
 			}
 			.btn{
-				width: 60%;
+				max-width: 80%;
 				display: block;
 			}
-			.btn2{
-				width: 60%;
-				display: block;
 			
-			}
 			.producto{
-				max-width: 60%;
-				align-items: center;
-				margin-left: 20%;
+				width: 90%;
+				margin: auto;
+				
+	
 			}
 			main h2{
 				align-self: center;
 			}
-			main h3{
-				align-items: center;
-			}
 			
 			a {
-				text-decoration: none; /* Elimina el subrayado */
-				color: inherit; /* Hereda el color del texto de su contenedor */
+				display: block;        
+				text-decoration: none;   
+				color: inherit;       
+				text-align: center;      
 			}
 			
 			
-
 			
 			
-			/* Contenedor de cada producto */
 			.producto {
 				display: flex;
 				align-items: center; 
 				margin-bottom: 20px;
 				border-bottom: 1px solid #ddd;
 				padding-bottom: 20px;
-				flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la pantalla es pequeña */
+				flex-wrap: wrap; 
+				text-align: center;
 			}
 			
-			/* Imagen del producto */
 			.producto img {
 				width: 100%;
 				height: auto;
 				border-radius: 8px;
+			}
+			.producto-info {
+				text-align: center; 
+				width: 100%;      
 			}
 			.precio {
 				font-size: 1.2em;
@@ -140,21 +128,47 @@
 				margin-bottom: 10px;
 			}
 			
-			.comprar, .btn, .btn2{
+			
+			
+			.comprar, .btn, .btn2
+			{
 				background-color: #27ae60;
 				color: white;
 				padding: 10px 20px;
 				border: none;
 				border-radius: 5px;
 				cursor: pointer;
-				margin-top: 10px;
+				margin-bottom: 5%;
 			}
 			
+			.col-derecha input[type="email"] {
+				padding: 10px;
+				width: 100%;
+				margin-bottom: 5%;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+			#col-s-3 {
+				width: 25%;
+				padding: 0 1.5%; 
+				box-sizing: border-box; 
+			}
+			
+			#col-s-9 {
+				width: 50%;
+				padding: 0 1.5%; 
+				box-sizing: border-box;
+			}
+			
+			#col-s-12 {
+				width: 25%;
+				padding: 0 1.5%; 
+				box-sizing: border-box;
+			}
 			.comprar :hover {
 				background-color: #2ecc71;
-			}
-			.btn :hover {
-				background-color: #2ecc71;
+
 			}
 
 			footer {
@@ -165,6 +179,26 @@
                 padding: 1.3477088948787061994609164420485%;
 				width: 94.339622641509433962264150943396%;	
             }	
+
+			/* For mobile phones (default styles for col-): */
+			[class*="col-"] {
+    			width: 100%;
+			}
+			@media only screen and (min-width: 600px) {
+				.col-s-1 {width: 8.33%;}
+				.col-s-2 {width: 16.66%;}
+				.col-s-3 {width: 25%;}
+				.col-s-4 {width: 33.33%;}
+				.col-s-5 {width: 41.66%;}
+				.col-s-6 {width: 50%;}
+				.col-s-7 {width: 58.33%;}
+				.col-s-8 {width: 66.66%;}
+				.col-s-9 {width: 75%;}
+				.col-s-10 {width: 83.33%;}
+				.col-s-11 {width: 91.66%;}
+				.col-s-12 {width: 100%;}
+			}
+			
 			@media only screen and (max-width: 767px){
 				
 				header {
@@ -182,7 +216,7 @@
 					left: 2%;
 				}
 				 #menu-hamburguesa ul {
-        display: block; /* En pantallas pequeñas, el menú es vertical */
+        display: block;
     }
 
     #menu-hamburguesa ul li {
@@ -190,13 +224,13 @@
     }
 
     #boton-hamburguesa {
-        display: inline-block; /* Mostrar el botón hamburguesa */
+        display: inline-block; 
     }
 
     #menu-hamburguesa {
 		display: none; /* Ocultar por defecto */
 		margin: 1.5477088948787061994609164420485%;
-		padding: 0; /* Elimina paddings */
+		padding: 0; 
 		position: fixed;
 					top: 30px;
 					left: 0%;
@@ -219,8 +253,8 @@
         max-width: 100%;
         padding: 1.5477088948787061994609164420485%;
         display: flex;
-        flex-direction: column; /* Organiza los productos en columna */
-        align-items: center; /* Centra los productos */
+        flex-direction: column; 
+        align-items: center; 
         margin: 0; 
     }
 
@@ -256,9 +290,66 @@
 				}
 			
 				#menu-hamburguesa ul li a {
-					font-size: 14px; /* Ajusta los estilos para pantallas grandes */
+					font-size: 14px; 
 					font-family: sans-serif;
 					color: #111010;
 				}
+				.col-1 {width: 8.33%;}
+				.col-2 {width: 16.66%;}
+				.col-3 {width: 25%;}
+				.col-4 {width: 33.33%;}
+				.col-5 {width: 41.66%;}
+				.col-6 {width: 50%;}
+				.col-7 {width: 58.33%;}
+				.col-8 {width: 66.66%;}
+				.col-9 {width: 75%;}
+				.col-10 {width: 83.33%;}
+				.col-11 {width: 91.66%;}
+				.col-12 {width: 100%;}
 			}
+			@media only screen and (min-width: 600px) and (max-width: 767px) {
+				.row {
+					display: flex;
+					flex-wrap: wrap; /* Esto asegura que las columnas se envuelvan si no caben */
+				}
+			
+				/* La primera columna ocupa un tercio del ancho */
+				.col-3 {
+					flex-basis: 33.33%;
+					width: 33.33%; /* Aseguramos que no sobrepase el 33% */
+				}
+			
+				/* La segunda columna ocupa dos tercios del ancho */
+				.col-6 {
+					flex-basis: 66.66%;
+					width: 66.66%; /* Aseguramos que no sobrepase el 66.66% */
+				}
+			
+				/* La tercera columna ocupa el 100% del ancho y va debajo de las otras dos */
+				.col-3:nth-child(3) {
+					flex-basis: 100%;
+					width: 100%;
+				}
+			}
+		
+			@media only screen and (max-width: 599px) {
+				main{
+					display: block;
+					.btn{margin: auto;
+						margin-bottom: 5%;
+					}
+
+				}
+				text-align: center; 
+				}
+				.row {
+					display: flex;
+					
+				}
+				
+				.col-3,
+				.col-6,
+				.col-3 {
+					width: 100%;
+				}
 			

@@ -3,12 +3,12 @@
                 box-sizing: border-box;
     			margin: auto;
    				padding: 0;
-   				max-width: 767px; 
-    			width: 100%; 
-   				background-image: linear-gradient(to bottom, white 0%, #4c8bd3 100%); 
+   				max-width: 767px; /* Limita el ancho máximo del contenido */
+    			width: 100%; /* Asegura que el body ocupe el 100% del ancho disponible */
+   				background-image: linear-gradient(to bottom, white 0%, #4c8bd3 100%); /* Fondo de la página */
     			background-repeat: no-repeat;
-    			background-attachment: fixed; 
-    			background-size: cover;
+    			background-attachment: fixed; /* El fondo no se mueve al hacer scroll */
+    			background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
     			min-height: 100vh; 
 			} 
 
@@ -31,17 +31,17 @@
 				}
             }
 			#menu-hamburguesa {
-				display: none; 
+				display: none; /* Ocultar el menú hamburguesa por defecto */
 				background-color: #6bbae7;
 				width: 75px;
 			}
 			
-			
+			/* Mostrar el menú hamburguesa solo cuando el checkbox está seleccionado */
 			#toggle-menu:checked + #boton-hamburguesa + #menu-hamburguesa {
 				display: block;
 			}
 			
-			
+			/* Estilo del botón de menú hamburguesa */
 			#boton-hamburguesa {
 				color: #fff;
 				font-size: 24px;
@@ -76,104 +76,45 @@
 			
 
             main {
-				border: 1px dashed black;
-				margin: 1.3477088948787061994609164420485%;
+                border: 1px dashed black;
+                margin: 1.3477088948787061994609164420485%;
 				padding: 1.3477088948787061994609164420485%;
 				text-align: center;
+				
 			}
-			
-			main .carrito {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
-			
-			.producto {
-				margin-bottom: 2%;
-			}
-			
-			.producto-info {
-				display: inline-block;
-				text-align: left;
-			}
-			
-			
-			
-			.producto-info {
-				display: flex;
-				flex-direction: column; 
-				text-align: center; 
-			}
-			.producto-info a {
-				display: block; 
-				text-align: center; 
-				margin: 0; 
-				padding: 0; 
-			}
-			
-			.producto-info label {
-				text-align: left; 
-				margin: 0; 
-				padding: 0; 
-				display: block; 
-			}
-			
-			
-			.producto-info .precio, .producto-info .total {
-				margin-bottom: 5px;
-				text-align: center; 
-			}
-			
-			.producto-info input[type="number"] {
-				margin-top: 10px;
-				width: 100px; 
-				padding: 5px;
-				text-align: center; 
-			}
-			h4 {
-				text-align: left; 
-				margin: 0; 
-				padding-left: 10px; 
-			}
-			.form-container {
-				text-align: left; 
-			}
-			
-			.form-container p {
-				margin-top: 0%;
-			}
-			#boton-pedido, #boton-editar-datos {
-				display: block;
-				max-width: 300px; 
-				width: 100%; 
-				margin: 10px auto; 
-				text-align: center;
-				background-color: #36a14d;
-				color: #000;
-				font-size: 20px;
-				padding: 1%;
-				text-decoration: none;
-				border-radius: 3%;
-				transition: background-color 0.3s ease;
-			}
-			
-			#boton-confirmar-pedido {
-				display: block;
-				max-width: 100%; 
-				margin: 4% ; 
 
-				text-align: center;
-				background-color: #36a14d;
-				color: #000;
-				font-size: 20px;
-				padding: 1%;
-				text-decoration: none;
-				border-radius: 3%;
-				transition: background-color 0.3s ease;
+			main section {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* Crea un grid con columnas automáticas */
+				gap: 1.5%; /* Espacio entre los elementos */
+				margin-top: 2%;
+				padding-bottom: 2%;
+			}
+			#gracias{
+				justify-items: center;
+				margin-bottom: 1%;
+			}
+			#informacion-pedido{
+				justify-items: left;
+				margin-top: 2%;
 			}
 			
-			#boton-pedido:hover, #boton-editar-datos:hover, #boton-confirmar-pedido:hover {
-				background-color: #3a6fa0;
+			#cancelar-pedido {
+				display: block;
+				text-align: center; 
+				background-color: #36a14d;
+				color: rgb(0, 0, 0); 
+				font-size: 20px; 
+				padding: 1%; 
+				text-decoration: none;
+				border-radius: 3%; 
+				transition: background-color 0.3s ease;
+				margin-top: 3%;
+
+			}
+			
+			#cancelar-pedido:hover {
+				background-color: #3a6fa0; /* Color de fondo cuando se pasa el ratón */
 			}
 			footer {
                 border: 1px dashed black;
@@ -183,7 +124,6 @@
                 padding: 1.3477088948787061994609164420485%;
 				width: 94.339622641509433962264150943396%;	
             }	
-			
 			@media only screen and (max-width: 767px){
 				
 				header {
@@ -201,7 +141,7 @@
 					left: 2%;
 				}
 				 #menu-hamburguesa ul {
-        display: 
+        display: block; /* En pantallas pequeñas, el menú es vertical */
     }
 
     #menu-hamburguesa ul li {
@@ -209,13 +149,13 @@
     }
 
     #boton-hamburguesa {
-        display:
+        display: inline-block; /* Mostrar el botón hamburguesa */
     }
 
     #menu-hamburguesa {
-		display: none;
+		display: none; /* Ocultar por defecto */
 		margin: 1.5477088948787061994609164420485%;
-		padding: 0;
+		padding: 0; /* Elimina paddings */
 		position: fixed;
 					top: 30px;
 					left: 0%;
@@ -225,12 +165,9 @@
 	#menu-hamburguesa :hover{
 		color: #401394;
 	}
-	
-	section span{
-		position: relative;
-		top: 2%;
-	}
-
+			
+			
+		
 }
 			
 			@media only screen and (min-width: 768px) {
