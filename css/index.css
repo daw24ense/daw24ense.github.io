@@ -1,4 +1,4 @@
-
+/* Reseteo de márgenes y padding */
 * {
     padding: 0;
     margin: 0;
@@ -40,7 +40,7 @@ header h1 {
 /* Estilo para el nav */
 nav {
     border: 1px dashed black;
-    margin: 1.35%;
+    margin: 2% 1.35% 1.35% 1.35%; /* Aumentamos el margen superior */
     padding: 1.35%;
     width: 94.34%;
     background-color: transparent; /* Fondo transparente */
@@ -48,25 +48,28 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-between; /* Disposición en fila */
+    justify-content: space-between;
     padding: 0;
+    flex-wrap: wrap; /* Aseguramos que los elementos se ajusten a pantallas pequeñas */
 }
 
 nav li {
     list-style: none;
     margin: 0.65%;
     padding: 8px 20px;
+    text-align: center; /* Alineamos el texto al centro */
 }
 
 nav li a {
     text-decoration: none;
-    color: black; /* Palabras en negro */
+    color: black;
     font-weight: bold;
     font-size: 14px;
+    display: block;
 }
 
 nav li:hover {
-    color: #2980b9; /* Color al pasar el mouse */
+    color: #2980b9;
 }
 
 /* Main */
@@ -120,26 +123,8 @@ main {
 }
 
 .col-6 a {
-    color: black; /* El texto de los enlaces será negro */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-}
-
-/* Botones */
-.comprar, .btn, .btn2 {
-    background-color: #27ae60; /* Verde para los botones */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px; /* Espaciado entre botones */
-    display: inline-block;
-    width: 100%; /* Ancho completo */
-    box-sizing: border-box; /* Aseguramos que el ancho ocupe toda la columna */
-}
-
-.comprar:hover, .btn:hover, .btn2:hover {
-    background-color: #2ecc71; /* Cambio de color al pasar el mouse */
+    color: black; 
+    text-decoration: none;
 }
 
 .col-derecha input[type="email"] {
@@ -151,6 +136,7 @@ main {
     box-sizing: border-box;
 }
 
+/* Estilos para las columnas */
 #col-s-3, #col-s-9, #col-s-12 {
     padding: 0 1.5%;
     box-sizing: border-box;
@@ -168,29 +154,55 @@ main {
     width: 25%;
 }
 
+/* Estilos para los botones */
+.comprar, .btn, .btn2 {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+.comprar:hover, .btn:hover, .btn2:hover {
+    background-color: #2ecc71;
+}
+
+/* Footer */
 footer {
     border: 1px dashed black;
     margin: 1.35%;
     padding: 1.35%;
     width: 94.34%;
-    background-color: transparent; /* Fondo transparente */
+    background-color: transparent;
 }
 
-/* For mobile phones (default styles for col-): */
+/* Estilos para dispositivos móviles */
 [class*="col-"] {
     width: 100%;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 767px) {
-
     header {
         margin-bottom: 0;
     }
 
     header img, header h1 {
         scale: 70%;
+    }
+
+    nav ul {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    nav li a {
+        font-size: 12px; /* Reducimos el tamaño del texto en pantallas pequeñas */
     }
 
     main section {
@@ -220,25 +232,25 @@ footer {
     .producto-info {
         text-align: center;
     }
+
     [class*="col-"] {
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 768px) {
-
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+    .col-1 { width: 8.33%; }
+    .col-2 { width: 16.66%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 33.33%; }
+    .col-5 { width: 41.66%; }
+    .col-6 { width: 50%; }
+    .col-7 { width: 58.33%; }
+    .col-8 { width: 66.66%; }
+    .col-9 { width: 75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%; }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
@@ -267,4 +279,3 @@ footer {
         display: block;
     }
 }
-
